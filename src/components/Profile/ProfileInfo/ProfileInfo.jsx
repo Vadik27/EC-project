@@ -44,6 +44,7 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, sendMainPhoto, sav
 
                 <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
             </div>
+            {console.log("RENDER!")}
         </div>
     );
 }
