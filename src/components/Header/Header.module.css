@@ -1,0 +1,31 @@
+.header {
+    grid-area: h;
+    background-color: #101010;
+}
+
+.innerHeader {
+    display: flex; 
+    height: 100%; 
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+} 
+
+.innerHeader h1 {
+    padding: 10px;
+    margin-right: auto;
+} 
+
+.loginBlock{
+    padding: 10px;
+    margin-left: auto;
+}
+
+.loginBlock a {
+    color: white;
+    text-decoration: none;
+}
+
+.loginBlock a:hover {
+    color: gold;
+}
