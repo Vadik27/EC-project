@@ -1,5 +1,5 @@
 import { getAuthUserData } from '../redux/authReducer'
-const INITIALAZED_SUCCESS = 'INITIALAZED_SUCCESS'
+const INITIALAZED_SUCCESS = 'samurai-network/initialazed/INITIALAZED_SUCCESS'
 
 let initialState = {
     initialized: false

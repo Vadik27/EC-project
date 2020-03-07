@@ -1,5 +1,5 @@
-const UPDATE_NEW_MESSAGE_BODY = 'UPDATE_NEW_MESSAGE_BODY';
-const SEND_MESSAGE = 'SEND_MESSAGE';
+const UPDATE_NEW_MESSAGE_BODY = 'samurai-network/dialogs/UPDATE_NEW_MESSAGE_BODY';
+const SEND_MESSAGE = 'samurai-network/dialogs/SEND_MESSAGE';
 
 let initialState = {
     dialogs: [
@@ -15,7 +15,7 @@ let initialState = {
         { id: 1, message: "Hi! I'm Vadim." },
         { id: 2, message: "How are you?" },
         { id: 3, message: "Yo" },
-        { id: 4, message: "Hello world! What is it?" }
+        { id: 4, message: "Hello world!" }
     ]
 };
 

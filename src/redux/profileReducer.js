@@ -1,17 +1,17 @@
 import { usersAPI, profileAPI } from './../api/api'
 import {stopSubmit} from "redux-form";
 
-const ADD_POST = 'ADD-POST'
-const SET_USER_PROFILE = 'SET_USER_PROFILE'
-const SET_STATUS = 'SET_STATUS'
-const SET_MAIN_PHOTO_SUCCESS = 'SET_MAIN_PHOTO_SUCCESS'
+const ADD_POST = 'samurai-network/profile/ADD-POST'
+const SET_USER_PROFILE = 'samurai-network/profile/SET_USER_PROFILE'
+const SET_STATUS = 'samurai-network/profile/SET_STATUS'
+const SET_MAIN_PHOTO_SUCCESS = 'samurai-network/profile/SET_MAIN_PHOTO_SUCCESS'
 
 let initialState = {
     posts: [
         { id: 1, message: "Hi, how are you ?", likesCount: 30 },
         { id: 2, message: "It's my first post", likesCount: 11 },
         { id: 3, message: "Yo", likesCount: 0 },
-        { id: 4, message: "Hello world! Hello world! Hello world!", likesCount: 1 }
+        { id: 4, message: "Hello world!", likesCount: 1 }
     ],
     profile: null,
     status: ""
@@ -67,9 +67,14 @@ export const getStatus = (userId) => async (dispatch) => {
 }
 
 export const updateStatus = (status) => async (dispatch) => {
-    let response = await profileAPI.updateStatus(status);
-    if (response.data.resultCode === 0) {
-        dispatch(setStatus(status));
+    try {
+        let response = await profileAPI.updateStatus(status);
+        if (response.data.resultCode === 0) {
+            dispatch(setStatus(status));
+        }
+    }
+    catch (error) {
+
     }
 }
 
